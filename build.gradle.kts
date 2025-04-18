@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.1.10"
+    kotlin("jvm") version "1.9.0"
+    application
 }
 
 group = "org.example"
@@ -16,6 +17,11 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
+}
+
+application {
+    mainClass.set("BonusCalculatorKt")
 }
